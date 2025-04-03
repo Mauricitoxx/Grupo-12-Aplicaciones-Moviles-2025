@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8b2f5cf-f067-4aa7-8129-5dad14e53102" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/androidTest/java/com/example/primeraplicacion/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/java/com/example/primeraplicacion/LoginActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/java/com/example/primeraplicacion/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/java/com/example/primeraplicacion/RegisterActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/java/com/example/primeraplicacion/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/java/com/example/primeraplicacion/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/java/com/example/primeraplicacion/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/drawable/fondo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/layout/layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/layout/registerlayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/app/src/test/java/com/example/primeraplicacion/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Primeraplicacion/settings.gradle.kts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "Merging main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
