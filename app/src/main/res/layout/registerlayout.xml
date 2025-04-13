@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvRegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Registro de Usuario"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese Nombre"
+        android:padding="7dp"/>
+
+    <EditText
+        android:id="@+id/etRegisterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif"
+        android:hint="Nombre"
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese Correo Electronico "
+        android:padding="7dp"/>
+
+    <EditText
+        android:id="@+id/etRegisterEmail1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:text="Ingrese Contraseña " />
+
+    <EditText
+        android:id="@+id/etRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/etRegisterPassword1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif"
+        android:hint="Repetir Contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnConfirmRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Registrar"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnBackRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Volver"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>
