@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Salir" />
+
+    <TextView
+        android:id="@+id/textViewBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido "
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/textViewSeleccion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plataforma utilizada: "
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione el sistema operativo del dispositivo"
+        android:textAlignment="center"
+        android:padding="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/buttonAndroid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_android_black_24dp"
+            android:text="Android" />
+
+        <Button
+            android:id="@+id/buttonIOS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft=""
+            android:text="iOS" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textViewSeleccion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preferencias: "
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione el tipo de preferencias que busca en el dispositivo"
+        android:textAlignment="center"
+        android:padding="12dp"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Programación"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Redes"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seguridad"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hardware"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/buttonOtro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:text="Otro" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+
+</LinearLayout>
