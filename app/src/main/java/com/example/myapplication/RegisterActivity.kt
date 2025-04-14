@@ -31,6 +31,11 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListenerOn
             }
 
+            if (contrasenia.length < 6 || repecontrasenia.length <6){
+                Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListenerOn
+            }
+
             if (contrasenia.trim() != repecontrasenia.trim()){
                 Toast.makeText(this, "La contraseÃ±a y su repeticion no son iguales, ingrese nuevamente.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListenerOn
