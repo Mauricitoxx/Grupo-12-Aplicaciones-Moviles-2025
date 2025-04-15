@@ -6,20 +6,22 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
 import android.widget.Toast
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity(){
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.bienvenida)
         val AndroidButton = findViewById<Button>(R.id.buttonAndroid)
         val IOSButton = findViewById<Button>(R.id.buttonIOS)
-        val Switch1 = findViewById<Switch>(R.id.switch1)
-        val Switch2 = findViewById<Switch>(R.id.switch2)
-        val Switch3 = findViewById<Switch>(R.id.switch3)
-        val Switch4 = findViewById<Switch>(R.id.switch4)
+        val Preferencia1 = findViewById<Switch>(R.id.switch1)
+        val Preferencia2 = findViewById<Switch>(R.id.switch2)
+        val Preferencia3 = findViewById<Switch>(R.id.switch3)
+        val Preferencia4 = findViewById<Switch>(R.id.switch4)
         val OtroButton = findViewById<Button>(R.id.buttonOtro)
         val opcionesExtras = mutableListOf<String>()
         val botonSalir = findViewById<Button>(R.id.buttonSalir)
@@ -72,10 +74,10 @@ class MainActivity : AppCompatActivity(){
             }
 
             val preferencias = mutableListOf<String>()
-            if (Switch1.isChecked) preferencias.add("Programacion")
-            if (Switch2.isChecked) preferencias.add("Redes")
-            if (Switch3.isChecked) preferencias.add("Seguridad")
-            if (Switch4.isChecked) preferencias.add("Hardware")
+            if (Preferencia1.isChecked) preferencias.add("Programacion")
+            if (Preferencia2.isChecked) preferencias.add("Redes")
+            if (Preferencia3.isChecked) preferencias.add("Seguridad")
+            if (Preferencia4.isChecked) preferencias.add("Hardware")
 
             val mensaje = StringBuilder()
             mensaje.append("Plataforma: $plataformaSeleccionada\n")
@@ -85,10 +87,10 @@ class MainActivity : AppCompatActivity(){
             Toast.makeText(this, mensaje.toString(), Toast.LENGTH_LONG).show()
 
             //Reiniciar todas las opciones
-            Switch1.isChecked = false
-            Switch2.isChecked = false
-            Switch3.isChecked = false
-            Switch4.isChecked = false
+            Preferencia1.isChecked = false
+            Preferencia2.isChecked = false
+            Preferencia3.isChecked = false
+            Preferencia4.isChecked = false
             plataformaSeleccionada = null
             opcionesExtras.clear()
         }
