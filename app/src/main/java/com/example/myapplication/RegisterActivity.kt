@@ -40,7 +40,9 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "La contraseÃ±a y su repeticion no son iguales, ingrese nuevamente.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListenerOn
             }else{
-                Toast.makeText(this, "El usuario se registro con exito", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "El usuario se registro con exito", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             }
         }
 

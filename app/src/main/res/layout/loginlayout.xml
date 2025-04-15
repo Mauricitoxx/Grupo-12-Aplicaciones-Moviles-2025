@@ -25,7 +25,7 @@
         android:autofillHints=""
         android:background="@android:drawable/editbox_background"
         android:ems="10"
-        android:text="@string/correo_electronico"
+        android:hint="Correo electronico / Nombre de usuario"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textSize="20sp"

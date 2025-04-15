@@ -7,49 +7,54 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="377dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
         android:text="¿Tiene problemas para iniciar sesión?"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_gravity="center_horizontal"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="280dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="54dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
         android:text="Ingrese su correo electronico y le enviaremos un enlace para que pueda recuperar el acceso a su cuenta"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="18sp"
 />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="269dp"
-        android:layout_height="43dp"
-        android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:inputType="textEmailAddress"
-        android:text="Correo electrónico"
+        android:hint="Correo electrónico"
+        android:padding="10dp"
+        android:textSize="20sp"
 />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="272dp"
-        android:layout_height="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Enviar enlace de inicio de sesion"
         android:textStyle="normal"
- />
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+    />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="268dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Crear una nueva cuenta"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
  />
 </LinearLayout>

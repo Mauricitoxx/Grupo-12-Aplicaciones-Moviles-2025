@@ -21,16 +21,16 @@ class LoginActivity : AppCompatActivity() {
             val contrasena = constraseniaEditText.text.toString().trim()
 
             if (email.isEmpty() || contrasena.isEmpty()){
-                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_LONG).show()
                 return@setOnClickListenerOn
             }
 
             if (email == "Juan Torres" && contrasena == "1234utn"){
-                Toast.makeText(this, "Inicio Sesion exitoso", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Inicio Sesion exitoso", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             } else {
-                Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_LONG).show()
             }
         }
 

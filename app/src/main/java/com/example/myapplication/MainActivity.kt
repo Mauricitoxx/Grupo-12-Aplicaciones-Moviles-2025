@@ -36,13 +36,13 @@ class MainActivity : AppCompatActivity(){
         AndroidButton.setOnClickListener {
             plataformaSeleccionada = "Android"
             resaltarSeleccionPlataforma()
-            Toast.makeText(this, "Plataforma seleccionada: Android", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Plataforma seleccionada: Android", Toast.LENGTH_LONG).show()
         }
 
         IOSButton.setOnClickListener {
             plataformaSeleccionada = "IOS"
             resaltarSeleccionPlataforma()
-            Toast.makeText(this, "Plataforma seleccionada: IOS", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Plataforma seleccionada: IOS", Toast.LENGTH_LONG).show()
         }
 
         OtroButton.setOnClickListener {
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(){
                     val nuevaOpcion = input.text.toString().trim()
                     if (nuevaOpcion.isNotEmpty()) {
                         opcionesExtras.add(nuevaOpcion)
-                        Toast.makeText(this, "Opción agregada: $nuevaOpcion", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Opción agregada: $nuevaOpcion", Toast.LENGTH_LONG).show()
                     } else {
                         Toast.makeText(this, "No se ingreso ninguna opción", Toast.LENGTH_SHORT).show()
                     }
