@@ -9,7 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="Salir" />
+        android:drawableRight="@drawable/ic_logout_24dp"
+        android:text="Salir"
+        android:background="@color/teal_700"/>
 
     <TextView
         android:id="@+id/textViewBienvenido"
@@ -43,14 +45,16 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="20dp">
 
         <Button
             android:id="@+id/buttonAndroid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_android_black_24dp"
+            android:drawableTop="@drawable/ic_android_black_24dp"
+            android:cursorVisible="true"
             android:text="Android" />
 
         <Button
@@ -58,7 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft=""
+            android:drawableTop="@drawable/ic_ios_24dp"
             android:text="iOS" />
     </LinearLayout>
 
@@ -115,6 +119,7 @@
         android:text="Otro" />
 
     <Button
+        android:id="@+id/buttonGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guardar"

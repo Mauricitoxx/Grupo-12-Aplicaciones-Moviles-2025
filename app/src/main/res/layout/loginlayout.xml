@@ -15,7 +15,7 @@
         android:layout_marginBottom="29dp"
         android:gravity="center"
         android:text="Iniciar Sesión"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <EditText
@@ -27,7 +27,7 @@
         android:hint="Correo Electrónico"
         android:inputType="textEmailAddress"
         android:padding="12dp"
-        android:textSize="26sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/Contraseña"
@@ -39,8 +39,8 @@
         android:fontFamily="sans-serif"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        android:padding="12dp"
-        android:textSize="26sp"
+        android:padding="16sp"
+        android:textSize="20sp"
         android:typeface="normal" />
 
     <Button
@@ -48,11 +48,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
         android:text="Iniciar Sesión"
         android:textAlignment="center"
-        android:textSize="14sp"
-        android:fontFamily="sans-serif-black"
-        tools:visibility="visible" />
+        android:textSize="16sp"
+        tools:visibility="visible"
+        android:clickable="true"/>
 
     <TextView
         android:id="@+id/textViewContraseña"
@@ -60,10 +61,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="90px"
         android:gravity="center"
         android:text="¿Olvidaste tu contraseña?"
-        android:layout_marginBottom="90px"/>
-
+        android:textSize="16sp" />
 
 
     <TextView
@@ -71,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¿No tienes cuenta?"
-        />
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button2"
@@ -81,5 +82,6 @@
         android:fontFamily="sans-serif-black"
         android:text="Registrarse"
         android:textAlignment="center"
-        />
+        android:textSize="16sp"
+        android:clickable="true"/>
 </LinearLayout>

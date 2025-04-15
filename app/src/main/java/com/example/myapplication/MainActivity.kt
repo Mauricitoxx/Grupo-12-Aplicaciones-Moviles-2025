@@ -1,23 +1,14 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.appcompat.app.AlertDialog
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.myapplication.ui.theme.MyApplicationTheme
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +21,27 @@ class MainActivity : AppCompatActivity(){
         val Switch3 = findViewById<Switch>(R.id.switch3)
         val Switch4 = findViewById<Switch>(R.id.switch4)
         val OtroButton = findViewById<Button>(R.id.buttonOtro)
+        val opcionesExtras = mutableListOf<String>()
+        val botonSalir = findViewById<Button>(R.id.buttonSalir)
+        val botonGuardar = findViewById<Button>(R.id.buttonGuardar)
+        var plataformaSeleccionada: String? = null
+
+        fun resaltarSeleccionPlataforma(){
+            AndroidButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada=="Android") R.color.teal_200 else android.R.color.darker_gray))
+            IOSButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada=="IOS") R.color.teal_200 else android.R.color.darker_gray))
+        }
+
+        AndroidButton.setOnClickListener {
+            plataformaSeleccionada = "Android"
+            resaltarSeleccionPlataforma()
+            Toast.makeText(this, "Plataforma seleccionada: Android", Toast.LENGTH_SHORT).show()
+        }
+
+        IOSButton.setOnClickListener {
+            plataformaSeleccionada = "IOS"
+            resaltarSeleccionPlataforma()
+            Toast.makeText(this, "Plataforma seleccionada: IOS", Toast.LENGTH_SHORT).show()
+        }
 
         OtroButton.setOnClickListener {
             val input = EditText(this)
@@ -42,51 +54,49 @@ class MainActivity : AppCompatActivity(){
                 .setPositiveButton("Aceptar") { _, _ ->
                     val nuevaOpcion = input.text.toString().trim()
                     if (nuevaOpcion.isNotEmpty()) {
+                        opcionesExtras.add(nuevaOpcion)
                         Toast.makeText(this, "Opción agregada: $nuevaOpcion", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(this, "No ingresaste ninguna opción", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "No se ingreso ninguna opción", Toast.LENGTH_SHORT).show()
                     }
                 }
                 .setNegativeButton("Cancelar", null)
                 .create()
-
             dialog.show()
         }
+
+        botonGuardar.setOnClickListener {
+            if (plataformaSeleccionada == null){
+                Toast.makeText(this, "Por favor, selecciones una plataforma", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val preferencias = mutableListOf<String>()
+            if (Switch1.isChecked) preferencias.add("Programacion")
+            if (Switch2.isChecked) preferencias.add("Redes")
+            if (Switch3.isChecked) preferencias.add("Seguridad")
+            if (Switch4.isChecked) preferencias.add("Hardware")
+
+            val mensaje = StringBuilder()
+            mensaje.append("Plataforma: $plataformaSeleccionada\n")
+            mensaje.append("Preferencias: ${if(preferencias.isNotEmpty()) preferencias.joinToString(", ") else "Ninguna"}\n")
+            mensaje.append("Otras opciones: ${if(opcionesExtras.isNotEmpty()) opcionesExtras.joinToString(",") else "Ninguna"}\n")
+
+            Toast.makeText(this, mensaje.toString(), Toast.LENGTH_LONG).show()
+
+            //Reiniciar todas las opciones
+            Switch1.isChecked = false
+            Switch2.isChecked = false
+            Switch3.isChecked = false
+            Switch4.isChecked = false
+            plataformaSeleccionada = null
+            opcionesExtras.clear()
+        }
+
+        botonSalir.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
-
-
-
-//Version Original
-// class MainActivity : ComponentActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
-//        setContent {
-//            MyApplicationTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//@Composable
-//fun Greeting(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    MyApplicationTheme {
-//        Greeting("Android")
-//    }
-//}
