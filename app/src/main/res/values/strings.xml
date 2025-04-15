@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="button_iniciar_sesion">Iniciar Sesión</string>
+    <string name="correo_electronico">Correo Electrónico</string>
 </resources>
