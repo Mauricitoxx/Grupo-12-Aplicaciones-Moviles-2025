@@ -12,6 +12,7 @@
         android:drawableRight="@drawable/ic_logout_24dp"
         android:text="Salir"
         android:background="@color/teal_700"
+        android:textColor="@color/white"
         android:layout_marginTop="25dp"
         android:layout_marginRight="10dp"/>
 
@@ -23,8 +24,11 @@
         android:textAlignment="center"
         android:textStyle="bold|italic"
         android:layout_gravity="center_horizontal"
-        android:textSize="20dp"
-        android:padding="15dp"/>
+        android:textSize="25dp"
+        android:padding="15dp"
+        android:layout_marginBottom="25px"/>
+
+
 
     <TextView
         android:id="@+id/textViewSeleccion1"
@@ -32,7 +36,9 @@
         android:layout_height="wrap_content"
         android:text="Plataforma utilizada: "
         android:textStyle="bold"
+        android:textSize="20dp"
         android:padding="10dp"/>
+
 
     <TextView
         android:id="@+id/textView4"
@@ -40,6 +46,7 @@
         android:layout_height="wrap_content"
         android:text="Seleccione el sistema operativo del dispositivo"
         android:textAlignment="center"
+        android:textSize="18dp"
         android:padding="12dp"/>
 
     <LinearLayout
@@ -83,7 +90,10 @@
         android:layout_height="wrap_content"
         android:text="Preferencias: "
         android:textStyle="bold"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:layout_marginTop="40px"/>
+
 
     <TextView
         android:id="@+id/textView7"
@@ -91,20 +101,25 @@
         android:layout_height="wrap_content"
         android:text="Seleccione el tipo de preferencias que busca en el dispositivo"
         android:textAlignment="center"
+        android:textSize="18dp"
         android:padding="12dp"/>
+
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Programación"
+        android:layout_marginBottom="20px"
         android:layout_marginHorizontal="15dp"/>
+
 
     <Switch
         android:id="@+id/switch2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Redes"
+        android:layout_marginBottom="20px"
         android:layout_marginHorizontal="15dp"/>
 
     <Switch
@@ -112,6 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Seguridad"
+        android:layout_marginBottom="20px"
         android:layout_marginHorizontal="15dp"/>
 
     <Switch
@@ -119,6 +135,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hardware"
+        android:layout_marginBottom="20px"
         android:layout_marginHorizontal="15dp"/>
 
     <Button
