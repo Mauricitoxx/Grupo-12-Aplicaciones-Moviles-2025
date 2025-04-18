@@ -1,5 +1,7 @@
 package com.example.myapplication
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color.RED
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -19,15 +21,20 @@ class LoginActivity : AppCompatActivity() {
         loginButton.setOnClickListener setOnClickListenerOn@{
             val email = emailEditText.text.toString().trim()
             val contrasena = constraseniaEditText.text.toString().trim()
-
             if (email.isEmpty() || contrasena.isEmpty()){
+
                 Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_LONG).show()
                 return@setOnClickListenerOn
             }
 
+
             if (email == "Juan Torres" && contrasena == "1234utn"){
+                val intent = Intent(this, MainActivity::class.java);
+                intent.putExtra("nombre",email);
+                startActivity(intent)
+
                 Toast.makeText(this, "Inicio Sesion exitoso", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, MainActivity::class.java))
+
                 finish()
             } else {
                 Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_LONG).show()

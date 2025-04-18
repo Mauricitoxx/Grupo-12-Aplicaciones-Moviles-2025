@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Switch
 import android.widget.Toast
 import android.annotation.SuppressLint
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.bienvenida)
+
         val AndroidButton = findViewById<Button>(R.id.buttonAndroid)
         val IOSButton = findViewById<Button>(R.id.buttonIOS)
         val Preferencia1 = findViewById<Switch>(R.id.switch1)
@@ -99,6 +101,11 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        val nom=intent.getStringExtra("nombre") ?: "Invitado"
+        val textoUsuario = findViewById<TextView>(R.id.textViewBienvenido);
+        textoUsuario.setText("Bienvenido, " + nom);
+
 
     }
 }
