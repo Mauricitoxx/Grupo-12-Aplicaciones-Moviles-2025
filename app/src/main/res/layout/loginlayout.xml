@@ -46,7 +46,9 @@
         android:inputType="textPassword"
         android:padding="16sp"
         android:textSize="23sp"
-        android:typeface="normal" />
+        android:typeface="normal"
+        android:drawableEnd="@drawable/ic_visibility_off"
+        android:drawablePadding="8dp"/>
 
     <Button
         android:id="@+id/button"

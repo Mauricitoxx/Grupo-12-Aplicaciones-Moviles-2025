@@ -1,23 +1,55 @@
 package com.example.myapplication
+
 import android.content.Intent
-import android.content.res.ColorStateList
-import android.graphics.Color.RED
 import android.os.Bundle
-import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.text.InputType
+import android.view.MotionEvent
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+
 class LoginActivity : AppCompatActivity() {
+    private var isPasswordVisible = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.loginlayout)
+
         val emailEditText = findViewById<EditText>(R.id.Correo_Electronico)
         val constraseniaEditText = findViewById<EditText>(R.id.Contraseña)
         val loginButton = findViewById<Button>(R.id.button)
         val olvidarContraseniaText = findViewById<TextView>(R.id.textViewContraseña)
         val registrarButton = findViewById<Button>(R.id.button2)
+
+        // 👁️ Mostrar/ocultar contraseña
+        constraseniaEditText.setOnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                val drawableEnd = 2
+                val drawable = constraseniaEditText.compoundDrawables[drawableEnd]
+                drawable?.let {
+                    val bounds = it.bounds
+                    val touchAreaStart = constraseniaEditText.width - constraseniaEditText.paddingEnd - bounds.width()
+                    if (event.x >= touchAreaStart) {
+                        isPasswordVisible = !isPasswordVisible
+                        if (isPasswordVisible) {
+                            constraseniaEditText.inputType =
+                                InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                            constraseniaEditText.setCompoundDrawablesWithIntrinsicBounds(
+                                0, 0, R.drawable.ic_visibility, 0
+                            )
+                        } else {
+                            constraseniaEditText.inputType =
+                                InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                            constraseniaEditText.setCompoundDrawablesWithIntrinsicBounds(
+                                0, 0, R.drawable.ic_visibility_off, 0
+                            )
+                        }
+                        constraseniaEditText.setSelection(constraseniaEditText.text.length)
+                        return@setOnTouchListener true
+                    }
+                }
+            }
+            false
+        }
 
         loginButton.setOnClickListener setOnClickListenerOn@{
             val email = emailEditText.text.toString().trim()
@@ -52,19 +84,13 @@ class LoginActivity : AppCompatActivity() {
                         val intent = Intent(this, MainActivity::class.java);
                         intent.putExtra("nombre",email);
                         startActivity(intent)
-
                         Toast.makeText(this, "Inicio Sesion exitoso", Toast.LENGTH_LONG).show()
-
                         finish()
                     } else {
                         Toast.makeText(this, "El usuario no se encuentra registrado", Toast.LENGTH_LONG).show()
                     }
                 }
-                }
-
-
-
-
+            }
         }
 
         olvidarContraseniaText.setOnClickListener{
@@ -76,6 +102,5 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
