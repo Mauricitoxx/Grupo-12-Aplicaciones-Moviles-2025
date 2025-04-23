@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/Yellow1">
 
     <TextView
         android:id="@+id/textView"
@@ -35,11 +36,18 @@
         android:layout_gravity="center_horizontal"
         android:inputType="textEmailAddress"
         android:hint="Correo electrónico"
-        android:background="@android:drawable/editbox_background"
+        android:background="@drawable/login"
         android:padding="10dp"
         android:textSize="20sp"
-        android:layout_marginBottom="40dp"
+
 />
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="8dp"
+        android:background="#000000" />
 
     <Button
         android:id="@+id/button3"
@@ -47,8 +55,10 @@
         android:layout_height="wrap_content"
         android:text="Enviar enlace de inicio de sesion"
         android:textStyle="normal"
+        android:background="@color/Green1"
         android:padding="20dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
         android:layout_gravity="center_horizontal"
     />
 
@@ -57,7 +67,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Crear una nueva cuenta"
+        android:background="@color/Green1"
         android:padding="20dp"
+        android:fontFamily="sans-serif-black"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
  />

@@ -7,7 +7,6 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import android.view.Gravity
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,8 +29,8 @@ class MainActivity : AppCompatActivity() {
 
 
         fun resaltarSeleccionPlataforma() {
-            AndroidButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada == "Android") R.color.teal_200 else android.R.color.darker_gray))
-            IOSButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada == "IOS") R.color.teal_200 else android.R.color.darker_gray))
+            AndroidButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada == "Android") R.color.Green1 else R.color.Green2))
+            IOSButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada == "IOS") R.color.Green1 else R.color.Green2))
         }
 
         AndroidButton.setOnClickListener {
@@ -52,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
             val container = LinearLayout(this)
             container.orientation = LinearLayout.VERTICAL
-            container.setPadding(50, 30, 50, 10) // ← aquí está el padding del popup
+            container.setPadding(50, 30, 50, 10)
             container.addView(input)
 
             val dialog = AlertDialog.Builder(this)
