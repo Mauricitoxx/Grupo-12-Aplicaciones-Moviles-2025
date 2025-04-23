@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#ffffff"
+    android:background="@color/Yellow1"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
 
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:contentDescription="Descripción de la imagen"
+        android:src="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/IniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:gravity="center"
-        android:text="@string/iniciar_sesion"
-        android:textSize="40sp"
-        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/Correo_Electronico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:background="@android:drawable/editbox_background"
+        android:background="@drawable/login"
         android:ems="10"
-        android:hint="Correo electronico / Nombre de usuario"
+        android:hint="Correo electrónico / Nombre de usuario"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textSize="23sp"
         tools:ignore="LabelFor" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#000000" />
+
+    <!-- Texto de error para el correo -->
+    <TextView
+        android:id="@+id/emailErrorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:text="Error de email"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
 
     <EditText
         android:id="@+id/Contraseña"
@@ -39,26 +55,47 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:autofillHints=""
-        android:background="@android:drawable/editbox_background"
+        android:background="@color/Yellow1"
+        android:drawableEnd="@drawable/ic_visibility_off"
+        android:drawablePadding="8dp"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="@string/contrasena"
         android:inputType="textPassword"
         android:padding="16sp"
         android:textSize="23sp"
-        android:typeface="normal"
-        android:drawableEnd="@drawable/ic_visibility_off"
-        android:drawablePadding="8dp"/>
+        android:typeface="normal" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#000000" />
+
+    <!-- Texto de error para la contraseña -->
+    <TextView
+        android:id="@+id/passwordErrorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:text="Error de contraseña"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:background="@color/Green1"
         android:clickable="true"
         android:fontFamily="sans-serif-black"
         android:text="@string/button_iniciar_sesion"
         android:textAlignment="center"
+
         android:textSize="21sp"
         tools:visibility="visible" />
 
@@ -71,22 +108,23 @@
         android:layout_marginBottom="100px"
         android:gravity="center"
         android:text="¿Olvidaste tu contraseña?"
+        android:textColor="@color/blackish"
         android:textSize="21sp" />
-
 
     <TextView
         android:id="@+id/textViewContraseña1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¿No tienes cuenta?"
+        android:textColor="@color/blackish"
         android:textSize="21sp" />
-
 
     <Button
         android:id="@+id/button2"
         android:layout_width="227dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25px"
+        android:background="@color/Green1"
         android:clickable="true"
         android:fontFamily="sans-serif-black"
         android:text="Registrarse"

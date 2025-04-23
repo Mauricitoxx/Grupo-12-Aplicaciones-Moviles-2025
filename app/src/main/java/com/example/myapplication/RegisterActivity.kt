@@ -4,9 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.view.MotionEvent
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class RegisterActivity : AppCompatActivity() {
@@ -24,6 +22,13 @@ class RegisterActivity : AppCompatActivity() {
         val repcontraseniaEdit = findViewById<EditText>(R.id.etRegisterPassword1)
         val registerButton = findViewById<Button>(R.id.btnConfirmRegister)
         val iniciosesionButton = findViewById<Button>(R.id.btnBackRegister)
+
+        val errorNombre = findViewById<TextView>(R.id.tvErrorNombre)
+        val errorEmail = findViewById<TextView>(R.id.tvErrorEmail1)
+        val errorPass = findViewById<TextView>(R.id.tvErrorPass)
+        val errorRepeatPass = findViewById<TextView>(R.id.tvErrorRepeatPass)
+
+        val defaultBackground = nombreEdit.background
 
         // Mostrar/ocultar contraseña principal
         contraseniaEdit.setOnTouchListener { _, event ->
@@ -71,24 +76,74 @@ class RegisterActivity : AppCompatActivity() {
             val contrasenia = contraseniaEdit.text.toString().trim()
             val repecontrasenia = repcontraseniaEdit.text.toString().trim()
 
-            if (nombre.isEmpty() || email.isEmpty() || contrasenia.isEmpty() || repecontrasenia.isEmpty()) {
-                Toast.makeText(this, "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show()
-                return@setOnClickListenerOn
+            // Ocultar errores previos
+            errorNombre.visibility = TextView.GONE
+            errorEmail.visibility = TextView.GONE
+            errorPass.visibility = TextView.GONE
+            errorRepeatPass.visibility = TextView.GONE
+
+            // Resetear bordes
+            nombreEdit.background = defaultBackground
+            emailEdit.background = defaultBackground
+            contraseniaEdit.background = defaultBackground
+            repcontraseniaEdit.background = defaultBackground
+
+            var hayError = false
+
+            if (nombre.isEmpty()) {
+                errorNombre.text = "El nombre es obligatorio"
+                errorNombre.visibility = TextView.VISIBLE
+                nombreEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
             }
 
-            if (contrasenia.length < 6 || repecontrasenia.length < 6) {
-                Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres.", Toast.LENGTH_SHORT).show()
-                return@setOnClickListenerOn
+            if (email.isEmpty()) {
+                errorEmail.text = "El correo es obligatorio"
+                errorEmail.visibility = TextView.VISIBLE
+                emailEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
+            }
+
+            if (contrasenia.isEmpty()) {
+                errorPass.text = "La contraseña es obligatoria"
+                errorPass.visibility = TextView.VISIBLE
+                contraseniaEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
+            }
+
+            if (repecontrasenia.isEmpty()) {
+                errorRepeatPass.text = "Debe repetir la contraseña"
+                errorRepeatPass.visibility = TextView.VISIBLE
+                repcontraseniaEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
+            }
+
+            if (contrasenia.length < 6) {
+                errorPass.text = "Debe tener al menos 6 caracteres"
+                errorPass.visibility = TextView.VISIBLE
+                contraseniaEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
+            }
+
+            if (repecontrasenia.length < 6) {
+                errorRepeatPass.text = "Debe tener al menos 6 caracteres"
+                errorRepeatPass.visibility = TextView.VISIBLE
+                repcontraseniaEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
             }
 
             if (contrasenia != repecontrasenia) {
-                Toast.makeText(this, "La contraseña y su repetición no son iguales, ingrese nuevamente.", Toast.LENGTH_SHORT).show()
-                return@setOnClickListenerOn
-            } else {
-                Toast.makeText(this, "El usuario se registró con éxito", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
+                errorRepeatPass.text = "Las contraseñas no coinciden"
+                errorRepeatPass.visibility = TextView.VISIBLE
+                contraseniaEdit.setBackgroundResource(R.drawable.borderbox)
+                repcontraseniaEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
             }
+
+            if (hayError) return@setOnClickListenerOn
+
+            Toast.makeText(this, "El usuario se registró con éxito", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         iniciosesionButton.setOnClickListener {
