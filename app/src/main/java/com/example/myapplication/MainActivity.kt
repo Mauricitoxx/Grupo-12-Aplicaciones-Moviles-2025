@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         OtroButton.setOnClickListener {
             val input = EditText(this)
-            input.hint = "Escribe tu nueva opción"
+            input.hint = "Escribe una nueva opción"
 
             val container = LinearLayout(this)
             container.orientation = LinearLayout.VERTICAL
@@ -70,6 +70,16 @@ class MainActivity : AppCompatActivity() {
                 .setNegativeButton("Cancelar", null)
                 .create()
 
+            dialog.setOnShowListener {
+                dialog.window?.setBackgroundDrawableResource(R.color.Yellow1)
+
+                val positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+                val negativeButton = dialog.getButton(AlertDialog.BUTTON_NEGATIVE)
+
+                positiveButton.setTextColor(ContextCompat.getColor(this, R.color.Green1))
+                negativeButton.setTextColor(ContextCompat.getColor(this, R.color.Green1))
+            }
+
             dialog.show()
         }
 
@@ -91,11 +101,20 @@ class MainActivity : AppCompatActivity() {
             mensaje.append("Otras opciones: ${if (opcionesExtras.isNotEmpty()) opcionesExtras.joinToString(", ") else "Ninguna"}")
 
 
-            AlertDialog.Builder(this)
+            val dialog = AlertDialog.Builder(this)
                 .setTitle("Sus preferencias")
                 .setMessage(mensaje.toString())
                 .setPositiveButton("OK", null)
-                .show()
+                .create()
+
+            dialog.setOnShowListener {
+                dialog.window?.setBackgroundDrawableResource(R.color.Yellow1)
+
+                val okButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+                okButton.setTextColor(ContextCompat.getColor(this, R.color.Green1))
+            }
+
+            dialog.show()
 
 
             Preferencia1.isChecked = false
@@ -112,7 +131,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val nom = intent.getStringExtra("Nombre") ?: "Invitado"
+        val nom = intent.getStringExtra("Nombre") ?: "Juan Torres"
         val textoUsuario = findViewById<TextView>(R.id.textViewBienvenido)
         textoUsuario.text = "Bienvenido, $nom"
     }

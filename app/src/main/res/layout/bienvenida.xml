@@ -112,7 +112,8 @@
         android:layout_height="wrap_content"
         android:text="Programación"
         android:layout_marginBottom="20px"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="15dp"
+        android:thumbTint="@color/Green2" />
 
 
     <Switch
@@ -121,7 +122,8 @@
         android:layout_height="wrap_content"
         android:text="Redes"
         android:layout_marginBottom="20px"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="15dp"
+        android:thumbTint="@color/Green2"/>
 
     <Switch
         android:id="@+id/switch3"
@@ -129,7 +131,8 @@
         android:layout_height="wrap_content"
         android:text="Seguridad"
         android:layout_marginBottom="20px"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="15dp"
+        android:thumbTint="@color/Green2"/>
 
     <Switch
         android:id="@+id/switch4"
@@ -137,7 +140,8 @@
         android:layout_height="wrap_content"
         android:text="Hardware"
         android:layout_marginBottom="20px"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="15dp"
+        android:thumbTint="@color/Green2"/>
 
     <Button
         android:id="@+id/buttonOtro"

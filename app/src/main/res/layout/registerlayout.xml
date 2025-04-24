@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingrese Nombre"
+        android:text="Ingrese su Nombre"
         android:padding="20dp"/>
 
     <EditText
@@ -46,12 +46,13 @@
         android:background="@color/Yellow1"
         android:textSize="14sp"
         android:visibility="gone"
-        android:text="Error en el Nombre" />
+        android:text="Error en el Nombre"
+        android:textColor="@android:color/holo_red_dark"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingrese Correo Electronico "
+        android:text="Ingrese Correo Electrónico "
         android:padding="10dp"/>
 
     <EditText
@@ -77,7 +78,8 @@
         android:background="@color/Yellow1"
         android:textSize="14sp"
         android:visibility="gone"
-        android:text="Error en email" />
+        android:text="Error en email"
+        android:textColor="@android:color/holo_red_dark"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -89,18 +91,18 @@
         android:id="@+id/etRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="8dp"
         android:background="@color/Yellow1"
         android:fontFamily="sans-serif"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        android:padding="16dp"
+        android:padding="8dp"
         android:drawableEnd="@drawable/ic_visibility_off"
         android:drawablePadding="8dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="4dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="#000000" />
@@ -111,7 +113,7 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="14sp"
         android:visibility="gone"
-        android:text="Error en contraseña" />
+        android:text="Error en la contraseña" />
 
     <EditText
         android:id="@+id/etRegisterPassword1"
@@ -122,7 +124,7 @@
         android:fontFamily="sans-serif"
         android:hint="Repetir Contraseña"
         android:inputType="textPassword"
-        android:padding="16dp"
+        android:padding="8dp"
         android:drawableEnd="@drawable/ic_visibility_off"
         android:drawablePadding="8dp"/>
     <View
@@ -139,7 +141,7 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="14sp"
         android:visibility="gone"
-        android:text="Error en repetición de contraseña" />
+        android:text="Error en la repetición de la contraseña" />
     <Button
         android:id="@+id/btnConfirmRegister"
         android:layout_width="match_parent"

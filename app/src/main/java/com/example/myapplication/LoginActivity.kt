@@ -97,12 +97,12 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("nombre", email)
                 startActivity(intent)
-                Toast.makeText(this, "Inicio Sesion exitoso", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Inicio de Sesión exitoso", Toast.LENGTH_LONG).show()
                 finish()
             } else {
                 emailEditText.setBackgroundResource(R.drawable.borderbox)
                 constraseniaEditText.setBackgroundResource(R.drawable.borderbox)
-                passwordErrorText.text = "No se pudo iniciar sesión porque no existe cuenta con ese mail"
+                passwordErrorText.text = "No se pudo iniciar sesión porque no existe una cuenta con ese mail"
                 passwordErrorText.visibility = TextView.VISIBLE
             }
         }

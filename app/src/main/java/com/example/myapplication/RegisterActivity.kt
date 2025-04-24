@@ -30,7 +30,6 @@ class RegisterActivity : AppCompatActivity() {
 
         val defaultBackground = nombreEdit.background
 
-        // Mostrar/ocultar contraseña principal
         contraseniaEdit.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 val drawableEnd = 2
@@ -50,7 +49,6 @@ class RegisterActivity : AppCompatActivity() {
             false
         }
 
-        // Mostrar/ocultar repetir contraseña
         repcontraseniaEdit.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 val drawableEnd = 2
@@ -76,13 +74,11 @@ class RegisterActivity : AppCompatActivity() {
             val contrasenia = contraseniaEdit.text.toString().trim()
             val repecontrasenia = repcontraseniaEdit.text.toString().trim()
 
-            // Ocultar errores previos
             errorNombre.visibility = TextView.GONE
             errorEmail.visibility = TextView.GONE
             errorPass.visibility = TextView.GONE
             errorRepeatPass.visibility = TextView.GONE
 
-            // Resetear bordes
             nombreEdit.background = defaultBackground
             emailEdit.background = defaultBackground
             contraseniaEdit.background = defaultBackground

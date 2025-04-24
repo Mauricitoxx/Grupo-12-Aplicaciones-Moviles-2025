@@ -37,7 +37,6 @@
         android:layout_marginEnd="8dp"
         android:background="#000000" />
 
-    <!-- Texto de error para el correo -->
     <TextView
         android:id="@+id/emailErrorText"
         android:layout_width="match_parent"
@@ -45,7 +44,7 @@
         android:paddingStart="4dp"
         android:paddingTop="4dp"
         android:text="Error de email"
-        android:textColor="@color/black"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="14sp"
         android:visibility="gone" />
 
@@ -73,7 +72,6 @@
         android:layout_marginEnd="8dp"
         android:background="#000000" />
 
-    <!-- Texto de error para la contraseña -->
     <TextView
         android:id="@+id/passwordErrorText"
         android:layout_width="match_parent"
