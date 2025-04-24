@@ -98,7 +98,13 @@ class RegisterActivity : AppCompatActivity() {
                 errorEmail.visibility = TextView.VISIBLE
                 emailEdit.setBackgroundResource(R.drawable.borderbox)
                 hayError = true
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                errorEmail.text = "El correo no es válido"
+                errorEmail.visibility = TextView.VISIBLE
+                emailEdit.setBackgroundResource(R.drawable.borderbox)
+                hayError = true
             }
+
 
             if (contrasenia.isEmpty()) {
                 errorPass.text = "La contraseña es obligatoria"
