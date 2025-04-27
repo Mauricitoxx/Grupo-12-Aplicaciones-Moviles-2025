@@ -11,17 +11,20 @@
         android:id="@+id/tvRegisterTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
         android:text="Registro de Usuario"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/blackish"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="Ingrese su Nombre"
-        android:padding="20dp"/>
+        android:textSize="20dp"
+        android:textColor="@color/brown"/>
 
     <EditText
         android:id="@+id/etRegisterEmail"
@@ -31,14 +34,15 @@
         android:fontFamily="sans-serif"
         android:hint="Nombre"
         android:inputType="textEmailAddress"
-        android:padding="10dp" />
+        android:padding="5dp"
+        android:textSize="18dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="2dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="#000000" />
+
     <TextView
         android:id="@+id/tvErrorNombre"
         android:layout_width="match_parent"
@@ -53,7 +57,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ingrese Correo Electrónico "
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/brown"
+        android:layout_marginTop="5dp"/>
 
     <EditText
         android:id="@+id/etRegisterEmail1"
@@ -63,11 +70,12 @@
         android:fontFamily="sans-serif"
         android:hint="Correo Electrónico"
         android:inputType="textEmailAddress"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:textSize="18dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="2dp"
+
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="#000000" />
@@ -84,8 +92,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="7dp"
-        android:text="Ingrese Contraseña " />
+        android:padding="10dp"
+        android:text="Ingrese Contraseña "
+        android:textColor="@color/brown"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"/>
 
     <EditText
         android:id="@+id/etRegisterPassword"
@@ -98,11 +109,11 @@
         android:inputType="textPassword"
         android:padding="8dp"
         android:drawableEnd="@drawable/ic_visibility_off"
-        android:drawablePadding="8dp"/>
+        android:drawablePadding="8dp"
+        android:textSize="18dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="4dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="#000000" />
@@ -126,11 +137,11 @@
         android:inputType="textPassword"
         android:padding="8dp"
         android:drawableEnd="@drawable/ic_visibility_off"
-        android:drawablePadding="8dp"/>
+        android:drawablePadding="8dp"
+        android:textSize="18dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="2dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:background="#000000" />
@@ -149,17 +160,19 @@
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-black"
         android:text="Registrar"
-        android:background="@color/Green1"
-        android:textColor="@android:color/black" />
+        android:background="@drawable/boton_redondo_1"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"/>
 
     <Button
         android:id="@+id/btnBackRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@color/Green1"
+        android:background="@drawable/boton_redondo_1"
         android:fontFamily="sans-serif-black"
         android:text="Volver"
         android:textColor="@android:color/black"
+        android:textSize="18dp"
         />
 </LinearLayout>

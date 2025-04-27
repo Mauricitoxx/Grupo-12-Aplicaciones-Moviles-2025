@@ -27,7 +27,7 @@
         android:hint="Correo electrónico / Nombre de usuario"
         android:inputType="textEmailAddress"
         android:padding="12dp"
-        android:textSize="23sp"
+        android:textSize="21sp"
         tools:ignore="LabelFor" />
     <View
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
         android:hint="@string/contrasena"
         android:inputType="textPassword"
         android:padding="16sp"
-        android:textSize="23sp"
+        android:textSize="21sp"
         android:typeface="normal" />
     <View
         android:layout_width="match_parent"
@@ -107,7 +107,7 @@
         android:gravity="center"
         android:text="¿Olvidaste tu contraseña?"
         android:textColor="@color/blackish"
-        android:textSize="21sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textViewContraseña1"
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:text="¿No tienes cuenta?"
         android:textColor="@color/blackish"
-        android:textSize="21sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button2"
