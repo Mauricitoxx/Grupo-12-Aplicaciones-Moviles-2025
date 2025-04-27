@@ -28,11 +28,11 @@
         android:textAlignment="center"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:padding="15dp"
         android:textColor="@color/blackish"
-        android:layout_marginBottom="20px"
-        android:layout_marginTop="35px"/>
+        android:layout_marginBottom="30px"
+        android:layout_marginTop="20px"/>
 
 
 
@@ -72,7 +72,7 @@
             android:layout_weight="1"
             android:padding="15sp"
             android:src="@drawable/ic_android_black_24dp"
-            android:background="@drawable/bordes"
+            android:background="@drawable/boton_redondo_2"
             android:layout_marginRight="10dp"
             android:scaleType="centerInside"
             android:contentDescription="Android"
@@ -85,7 +85,7 @@
             android:layout_weight="1"
             android:padding="15sp"
             android:src="@drawable/baseline_1k_plus_24"
-            android:background="@drawable/bordes"
+            android:background="@drawable/boton_redondo_2"
             android:layout_marginLeft="10dp"
             android:scaleType="centerInside"
             android:contentDescription="IOS"
@@ -180,7 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/boton_redondo_1"
         android:padding="15dp"
         android:text="Guardar"

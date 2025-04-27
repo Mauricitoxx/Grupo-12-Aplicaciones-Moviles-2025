@@ -29,8 +29,9 @@ class MainActivity : AppCompatActivity() {
 
 
         fun resaltarSeleccionPlataforma() {
-            AndroidButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada == "Android") R.color.Green1 else R.color.Green2))
-            IOSButton.setBackgroundColor(ContextCompat.getColor(this, if (plataformaSeleccionada == "IOS") R.color.Green1 else R.color.Green2))
+            AndroidButton.setBackgroundResource(if (plataformaSeleccionada == "Android") R.drawable.boton_redondo_1 else R.drawable.boton_redondo_2)
+            IOSButton.setBackgroundResource(if (plataformaSeleccionada == "IOS") R.drawable.boton_redondo_1 else R.drawable.boton_redondo_2)
+
         }
 
         AndroidButton.setOnClickListener {
