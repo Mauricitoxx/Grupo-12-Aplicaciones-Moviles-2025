@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.bienvenida)
 
-        val AndroidButton = findViewById<Button>(R.id.buttonAndroid)
-        val IOSButton = findViewById<Button>(R.id.buttonIOS)
+        val AndroidButton = findViewById<ImageButton>(R.id.buttonAndroid)
+        val IOSButton = findViewById<ImageButton>(R.id.buttonIOS)
         val Preferencia1 = findViewById<Switch>(R.id.switch1)
         val Preferencia2 = findViewById<Switch>(R.id.switch2)
         val Preferencia3 = findViewById<Switch>(R.id.switch3)
